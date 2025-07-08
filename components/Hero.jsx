@@ -1,9 +1,16 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import heroImg from "@/public/heroImg.jpg"
 import Navbar from './Navbar'
 import { Button } from './ui/button'
+import c1 from "@/public/c1.png"
+import c2 from "@/public/c2.png"
+import c3 from "@/public/c3.png"
+import c4 from "@/public/c4.png"
+import c5 from "@/public/c5.png"
+
+const logos = [c1, c2, c3, c4, c5]
 
 const Hero = () => {
   return (
@@ -18,7 +25,7 @@ const Hero = () => {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-10" />
+      <div className="absolute inset-0 bg-black/30 z-10" />
 
       {/* Foreground Content */}
       <div className="absolute inset-0 z-20">
@@ -26,7 +33,7 @@ const Hero = () => {
 
         {/* Centered Text + Buttons */}
         <div className="flex flex-col items-center justify-center h-full px-4 text-center text-white space-y-6">
-          <h1 className="font-extrabold text-4xl sm:text-5xl md:text-6xl leading-tight max-w-4xl">
+          <h1 className="font-semibold text-4xl sm:text-5xl md:text-6xl leading-tight max-w-4xl">
             Grow your business faster
           </h1>
 
@@ -43,6 +50,21 @@ const Hero = () => {
               Reach Us For Audit
             </Button>
           </div>
+
+          <div className=" mt-12  overflow-hidden">
+            <div className="absolute inset-0 z-10 pointer-events-none" />
+            <div className="flex animate-slide gap-16 w-max relative z-0 px-8 py-4 bg-transparent">
+              {[...logos, ...logos].map((logo, idx) => (
+                <Image
+                  key={idx}
+                  src={logo}
+                  alt={`logo-${idx}`}
+                  className="w-32 h-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                />
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
