@@ -4,6 +4,7 @@ import Grid1 from "@/public/grid1.png"
 import Grid2 from "@/public/grid2.png"
 import Grid3 from "@/public/grid3.png"
 import { Button } from './ui/button'
+import ServiceFooter from './ServiceFooter'
 
 const Services = () => {
   return (
@@ -77,16 +78,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer Section */}
-      <footer className="w-full bg-blue-600 px-6 py-10 mt-16 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6">
-        <h2 className="text-white text-xl font-semibold text-center md:text-left">
-          Need More Services?
-        </h2>
-        <Button className="bg-transparent text-white hover:bg-blue-600 font-semibold px-4 py-8   transition rounded-full border border-white cursor-pointer">
-          Request a Personalized Service
-        </Button>
-      </footer>
     </main>
   )
 }
