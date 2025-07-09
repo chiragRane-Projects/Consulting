@@ -7,23 +7,27 @@ import { Button } from './ui/button'
 
 const Services = () => {
   return (
-    <main className='flex flex-col py-25 px-8 md:px-20'>
+    <main className='flex flex-col py-20 px-8 md:px-20'>
 
-      <div className='flex flex-row space-x-2 text-blue-400  justify-start '>
-        <p className='font-medium text-2xl md:text-2xl'>⸻</p>
-        <p className='font-medium text-2xl md:text-2xl tracking-wider'>Our Services</p>
+      {/* Section Header */}
+      <div className='flex flex-row space-x-2 text-blue-400 justify-start'>
+        <p className='font-medium text-2xl'>⸻</p>
+        <p className='font-medium text-2xl tracking-wider'>Our Services</p>
       </div>
 
-      <div className='flex flex-col gap-4  md:grid md:grid-cols-2 p-6 md:p-8'>
-        <h2 className='font-semibold text-3xl md:font-extrabold md:text-6xl'>We Offer a wide range of services</h2>
-        <p className='text-md md:mt-10 leading-10'>By combining our industry knowledge with cutting-edge tools and methodologies, we develop strategies that drive measurable results.</p>
+      <div className='flex flex-col gap-4 md:w-full md:grid md:grid-cols-2 p-6 md:p-8'>
+        <h2 className='font-semibold text-3xl md:font-extrabold md:text-6xl'>
+          We Offer a wide range of services
+        </h2>
+        <p className='text-md md:mt-10 leading-10'>
+          By combining our industry knowledge with cutting-edge tools and methodologies, we develop strategies that drive measurable results.
+        </p>
       </div>
 
       {/* Images Layout */}
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 cursor-pointer">
         {/* Left: One large service card */}
-        <div className="relative group w-full md:-[620px] rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 ease-in-out">
+        <div className="relative group w-full rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 ease-in-out">
           <Image
             src={Grid1}
             alt="Market research"
@@ -75,15 +79,14 @@ const Services = () => {
       </div>
 
       {/* Footer Section */}
-      <footer className="bg-blue-500 w-full px-6 py-10 md:px-12 md:py-16 flex flex-col md:flex-row items-center justify-between gap-6 rounded-sm mt-16 md:mt-24">
-        <p className="text-white text-lg md:text-2xl font-semibold text-center md:text-left">
+      <footer className="w-full bg-blue-600 px-6 py-10 mt-16 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <h2 className="text-white text-xl font-semibold text-center md:text-left">
           Need More Services?
-        </p>
-        <Button className="rounded-full px-4 md:px-8 py-7 text-base font-semibold bg-transparent border border-white cursor-pointer hover:bg-blue-500 duration-300 transition-colors ">
-          Request Personalized Service
+        </h2>
+        <Button className="bg-transparent text-white hover:bg-blue-600 font-semibold px-4 py-8   transition rounded-full border border-white cursor-pointer">
+          Request a Personalized Service
         </Button>
       </footer>
-
     </main>
   )
 }
