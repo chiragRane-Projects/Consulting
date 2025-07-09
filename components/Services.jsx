@@ -79,7 +79,7 @@ const Services = () => {
         <p className="text-white text-lg md:text-2xl font-semibold text-center md:text-left">
           Need More Services?
         </p>
-        <Button className="rounded-full px-8 py-7 text-base font-semibold bg-transparent border border-white cursor-pointer hover:bg-blue-500 duration-300 transition-colors ">
+        <Button className="rounded-full px-4 md:px-8 py-7 text-base font-semibold bg-transparent border border-white cursor-pointer hover:bg-blue-500 duration-300 transition-colors ">
           Request Personalized Service
         </Button>
       </footer>
