@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -132,3 +134,4 @@
 .animate-slide{
     animation: slide 80s linear infinite;
 }
+
